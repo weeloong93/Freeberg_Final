@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Stock Tracker{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'stocktracker/style.css' %}" />
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<!--Top Menu Bar -->
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!--Logo-->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MainNavBar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="navbar-brand">FreeBerg</span>
+
+                    </div>
+                    <div class="collapse navbar-collapse" id="MainNavBar">
+                        <!--left navbar-->
+                        <ul class="nav navbar-nav">
+                            <li><a href="{% url 'stocktracker:index' %}">Home</a></li>
+                            <li><a href="{% url 'stocktracker:allstocks' %}">Stocktrack</a></li>
+                            <li><a href="{% url 'stocktracker:pickstock1' %}">Comparisons</a></li>
+                        </ul>
+                        {% block nav-search %}
+                        <!--Insert- Working Search Bar-->
+
+                        {% endblock %}
+                    </div>
+                </div>
+        </nav>
+
+{% block body %}
+
+
+{% endblock %}
+        <footer class="container-fluid bg-1 text-right">
+            <p>Website created by Ng Wee Loong, Nelson Tan </p>
+        </footer>
+</body>
+</html>

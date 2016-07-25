@@ -1,0 +1,101 @@
+{% extends 'stocktracker/base.html' %}
+
+{% block title %}All Stocks{% endblock %}
+
+{% block body  %}
+<div class="container-fluid pickstock2-intro text-center">
+        <H1>Comparisons</H1>
+        <p> Choose stock to compare with </p>
+        <form class="pickstock2-form" role="search" method="GET" action="">
+            <div class="form-group">
+                <div class="col-xs-4 col-xs-offset-4">
+                    <input type="text" class="form-control" name="q" value="{{ request.GET.q }}">
+                    <button type="submit" class="btn btn-default">Search</button>
+                </div>
+            </div>
+        </form>
+</div>
+<div class="pickstock2-container container-fluid">
+    <div class="row">
+        <div class="allstock col-sm-4">
+                <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/finance.png" class="img-rounded" alt="finance" width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Financials" %}
+                        <p>
+                            <a href="{% url 'stocktracker:comparison' stock_id1=stock1.id stock_id2=stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="allstock col-sm-4">
+            <div class="thumbnail allstock">
+            <img src="../../static/stocktracker/images/real%20estate.png" class="img-rounded" alt="Real estate" width="100%">
+            {% for stock in stocks %}
+                {% if stock.industry == "Real Estate" %}
+                    <p>
+                        <a href="{% url 'stocktracker:comparison' stock_id1=stock1.id stock_id2=stock.id %}" >{{ stock.company_name }},
+                        {{ stock.lastprice }}SGD</a>
+                    </p>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        <div class="allstock col-sm-4">
+                <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/industrial.png" class="img-rounded" alt=Industrials width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Industrials" %}
+                        <p>
+                            <a href="{% url 'stocktracker:comparison' stock_id1=stock1.id stock_id2=stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="allstock col-sm-4">
+            <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/Utilities.png" class="img-rounded" alt="Utilities" width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Utilities" %}
+                        <p>
+                            <a href="{% url 'stocktracker:comparison' stock_id1=stock1.id stock_id2=stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="allstock col-sm-4">
+                <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/others.png" class="img-rounded" alt="Others" width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Other Services" %}
+                        <p>
+                            <a href="{% url 'stocktracker:comparison' stock_id1=stock1.id stock_id2=stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+                </div>
+        </div>
+        <div class="allstock col-sm-4">
+                <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/consumers.png" class="img-rounded" alt="Consumer Staples" width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Consumer Staples" %}
+                        <p>
+                            <a href="{% url 'stocktracker:comparison' stock_id1=stock1.id stock_id2=stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'stocktracker/base.html' %}
+
+{% block title %}All Stocks{% endblock %}
+
+{% block nav-search %}
+    <!--Working Search Bar-->
+    <form class="navbar-form navbar-left" role="search" method="GET" action="">
+        <div class="form-group">
+        <input type="text" class="form-control" name="q" value="{{ request.GET.q }}">
+        </div>
+    <button type="submit" class="btn btn-default">Search</button>
+    </form>
+{% endblock %}
+
+{% block body  %}
+<div class="container-fluid allstock-intro text-center">
+        <H1>Stocktrack</H1>
+        <p> Stock information at your fingertips </p>
+</div>
+<div class="allstock-container container-fluid">
+    <div class="row">
+        <div class="allstock col-sm-4">
+                <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/finance.png" class="img-rounded" alt="finance" width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Financials" %}
+                        <p>
+                            <a href="{% url 'stocktracker:individual_stock' stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="allstock col-sm-4">
+            <div class="thumbnail allstock">
+            <img src="../../static/stocktracker/images/real%20estate.png" class="img-rounded" alt="Real estate" width="100%">
+            {% for stock in stocks %}
+                {% if stock.industry == "Real Estate" %}
+                    <p>
+                        <a href="{% url 'stocktracker:individual_stock' stock.id %}" >{{ stock.company_name }},
+                        {{ stock.lastprice }}SGD</a>
+                    </p>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        <div class="allstock col-sm-4">
+                <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/industrial.png" class="img-rounded" alt=Industrials width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Industrials" %}
+                        <p>
+                            <a href="{% url 'stocktracker:individual_stock' stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="allstock col-sm-4">
+            <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/Utilities.png" class="img-rounded" alt="Utilities" width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Utilities" %}
+                        <p>
+                            <a href="{% url 'stocktracker:individual_stock' stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="allstock col-sm-4">
+                <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/others.png" class="img-rounded" alt="Others" width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Other Services" %}
+                        <p>
+                            <a href="{% url 'stocktracker:individual_stock' stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+                </div>
+        </div>
+        <div class="allstock col-sm-4">
+                <div class="thumbnail allstock">
+                <img src="../../static/stocktracker/images/consumers.png" class="img-rounded" alt="Consumer Staples" width="100%">
+                {% for stock in stocks %}
+                    {% if stock.industry == "Consumer Staples" %}
+                        <p>
+                            <a href="{% url 'stocktracker:individual_stock' stock.id %}" >{{ stock.company_name }},
+                            {{ stock.lastprice }}SGD</a>
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

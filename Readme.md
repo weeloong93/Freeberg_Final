@@ -20,7 +20,7 @@ With these problems in mind, Freeberg aims to resolve these issues by allowing t
 We are currently aiming for the `Project: Gemini` achievement. We plan to fulfill the following requirements in order meet this achievement:
 
 * Log in at least 130 hours each
-* Build Django framework for our webapp
+* Use Django framework for our webapp
 * Extract Live Data through API
 * Application-specific feature extensions - Exporting Graphical Data
 * Enable downloading of data. 
@@ -29,10 +29,10 @@ Optional Features:
 * User saved stock list
 
 #Project Achievement/ Deliverables
-As business students with relatively less exposure to frameworks and coding, we spent a lot of time learning about relevant modules and the implementation process. We have done up the stocktracker and comparison for the companies which allow users to retrieve and compared companies up-to-date information.
+As business students with relatively less exposure to frameworks and coding, we spent a lot of time learning about relevant modules and the implementation process. We used python 3.5.1 and javascript language to built our webapp, Freeberg. We have done up the stocktracker and comparison for the companies which allow users to retrieve and compared companies up-to-date information.
 
 ##4 additional extension milestones completed 
-1.	Application specific: Built Django framework to create webapp 
+1.	Application specific: Used Django framework to create webapp 
 2.	Application specifc: Used Graphing tools to visualise data
 3.	Live Stock updates: Used of ystockquote to pull up-to-date information from Yahoo Finance page
 4.	Downloading: Enabled downloading of graphs and company information 

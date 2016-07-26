@@ -29,7 +29,7 @@ Optional Features:
 * User saved stock list
 
 #Project Achievement/ Deliverables
-As business students with relatively less exposure to frameworks and coding, we spent a lot of time learning about relevant modules and the implementation process. We used python 3.5.1 and javascript language to built our webapp, Freeberg. We have done up the stocktracker and comparison for the companies which allow users to retrieve and compared companies up-to-date information.
+As business students with relatively less exposure to frameworks and coding, we spent a lot of time learning about relevant modules and their implementation processes. We used python 3.5.1 and Django 1.9 to build our webapp, Freeberg. We have finished the stocktracker and comparison function which allow users to retrieve and compare up-to-date financial information for countries on the Straits Times Index.
 
 ##4 additional extension milestones completed 
 1.	Application specific: Used Django framework to create webapp 
@@ -50,13 +50,16 @@ In the future, we seek to implement a personalisation page for the user to keep 
 ##Cognitive walkthrough
 We focused on how easy it is for new users to accomplish tasks with the system.
 New users who want to access the individual stock information can: 
-1. click on the stocktracker page
-2. choosing their choice of stock to view
+1. Click on the stocktracker page
+2. Choose their choice of stock to view
+3. Enjoy the analytical features of Freeberg
+
 New Users who want to compare different companies' stock information  can:  
 1. Click on comparison page 
-2. select 1st stock 
-3. select 2nd stock
+2. Select 1st stock 
+3. Select 2nd stock
+4. Enjoy the analytical features of Freeberg
 
 #Appendix
 To view the webapp, please install packages: 
-Jinja2 / MarkupSafe / PyYAML / bokeh v 0.11.1 / django / djangorestframework / numpy / pandas / pip / python-dateutil / pytz / requests / setuptools /  six / tornado / ystockquote 
+Python v3.5.1/ django v1.9 / Jinja2 / MarkupSafe / PyYAML / bokeh v 0.11.1 / django / djangorestframework / numpy / pandas / pip / python-dateutil / pytz / requests / setuptools /  six / tornado / ystockquote 

@@ -29,7 +29,7 @@ Optional Features:
 * User saved stock list
 
 #Project Achievement/ Deliverables
-As business students with relatively less exposure to frameworks and coding, we spent a lot of time learning about relevant modules and their implementation processes. We used python 3.5.1 and Django 1.9 to build our webapp, Freeberg. We have finished the stocktracker and comparison function which allow users to retrieve and compare up-to-date financial information for countries on the Straits Times Index.
+As business students with relatively less exposure to frameworks and coding, we spent a lot of time learning about relevant modules and their implementation processes. We used python 3.5.1 and Django 1.9 to build our webapp, Freeberg. We have finished the stocktracker and comparison function which allow users to retrieve and compare up-to-date financial information for companies on the Straits Times Index.
 
 ##4 additional extension milestones completed 
 1.	Application specific: Used Django framework to create webapp 
@@ -63,3 +63,6 @@ New Users who want to compare different companies' stock information  can:
 #Appendix
 To view the webapp, please install packages: 
 Python v3.5.1 / django v1.9 / Jinja2 / MarkupSafe / PyYAML / bokeh v 0.11.1 / djangorestframework / numpy / pandas / pip / python-dateutil / pytz / requests / setuptools /  six / tornado / ystockquote 
+
+To run server on terminal: 
+type: "python manage.py runserver"

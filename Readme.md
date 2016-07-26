@@ -62,4 +62,4 @@ New Users who want to compare different companies' stock information  can:
 
 #Appendix
 To view the webapp, please install packages: 
-Python v3.5.1/ django v1.9 / Jinja2 / MarkupSafe / PyYAML / bokeh v 0.11.1 / django / djangorestframework / numpy / pandas / pip / python-dateutil / pytz / requests / setuptools /  six / tornado / ystockquote 
+Python v3.5.1 / django v1.9 / Jinja2 / MarkupSafe / PyYAML / bokeh v 0.11.1 / djangorestframework / numpy / pandas / pip / python-dateutil / pytz / requests / setuptools /  six / tornado / ystockquote 
